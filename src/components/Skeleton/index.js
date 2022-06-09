@@ -87,7 +87,7 @@ export const Table = ({ loading, columns, dataSource, onRow, ...props }) => {
           : columns
       }
       onRow={node => {
-        if (!node) return null;
+        if (!node || loading) return null;
         return onRow(node);
       }}
     />
